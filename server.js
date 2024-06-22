@@ -9,7 +9,9 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin:'*'}
+));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to MongoDB
